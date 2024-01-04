@@ -1,8 +1,8 @@
-public class VariableNamesTheme{
+public class VariableNamesTheme {
     public static void main(String[] args) {
         System.out.println("1. Разные переменные:");
 
-        //цифра. тип выбран byte так как цифра от -0 до 9 и требуем минимум памяти для хранения
+        //цифра
         int digit = 4;
         System.out.println("цифра = " + digit);
 
@@ -14,7 +14,7 @@ public class VariableNamesTheme{
         int productNumber = 7 * 7;
         System.out.println("произведение чисел = " + productNumber);
 
-        //максимальное число. так как данный тип способен хранить наибольшее число
+        //максимальное число
         long maxNumber = 9;
         System.out.println("максимальное число = " + maxNumber);
 
@@ -35,8 +35,8 @@ public class VariableNamesTheme{
         System.out.println("процент по вкладу = " + interestRate + "%");
 
         // (переменная хранит символ) &. Так как данный тип предназначен для хранения символов
-        char charSymbol = '&';
-        System.out.println("(переменная хранит символ = " + charSymbol);
+        char ampersand = '&';
+        System.out.println("(переменная хранит символ = " + ampersand);
 
         //код ошибки
         int errorCode = 500;
@@ -59,8 +59,8 @@ public class VariableNamesTheme{
         System.out.println("случайное число = " + randomNumber);
 
         //математическое выражение
-        String mathematicalExpression = "2a + 2a";
-        System.out.println("математическое выражение = " + mathematicalExpression);
+        String math = "2a + 2a";
+        System.out.println("математическое выражение = " + math);
 
         //выбор чего либо
         String selection = "AQA или java?";
@@ -95,12 +95,12 @@ public class VariableNamesTheme{
         System.out.println("полное имя работника месяца = " + fullNameEmployeeMonth);
 
         //заголовок электронной книги (размер)
-        int ebookTitleSize = 32;
-        System.out.println("заголовок электронной книги (размер) = " + ebookTitleSize + " пикселя");
+        String ebookTitle = "Введение";
+        System.out.println("заголовок электронной книги (размер) = " + ebookTitle);
 
         //вместимость (чего либо)
-        int capacitySomething = 45;
-        System.out.println("вместимость (чего либо) = " + capacitySomething + " литров");
+        int capacity = 45;
+        System.out.println("вместимость (чего либо) = " + capacity + " литров");
 
         //счетчик
         int counter = 111;
@@ -111,14 +111,14 @@ public class VariableNamesTheme{
         System.out.println("путь до файла = " + pathFile);
 
         //количество чисел в каждой строке
-        int numberNumbersEachLine = 100;
-        System.out.println("количество чисел в каждой строке = " + numberNumbersEachLine);
+        int countNumbers = 100;
+        System.out.println("количество чисел в каждой строке = " + countNumbers);
 
         System.out.println("\n2. boolean-переменные:");
 
         //сотни равны?
-        boolean isHundredsEqual = true;
-        System.out.println("сотни равны? = " + isHundredsEqual);
+        boolean isEqualHundreds = true;
+        System.out.println("сотни равны? = " + isEqualHundreds);
 
         //компьютер включен
         boolean isComputerOn = false;
@@ -145,8 +145,8 @@ public class VariableNamesTheme{
         System.out.println("новый? = " + isNew);
 
         //электронная почта действительная?
-        boolean isEmailValid = true;
-        System.out.println("электронная почта действительная? = " + isEmailValid);
+        boolean isValidEmai = true;
+        System.out.println("электронная почта действительная? = " + isValidEmai);
 
         //имеются уникальные строки?
         boolean hasUniqueStrings = true;
@@ -181,6 +181,5 @@ public class VariableNamesTheme{
         // кодировка american standard code for information interchange
         String ascii = "ASCII";
         System.out.println("Кодировка american standard code for information interchange = " + ascii);
-
     }
 }
