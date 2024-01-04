@@ -71,6 +71,7 @@ public class VariablesTheme {
         "\nзначение после декремента переменной initialLong = " + (-- initialLong));
 
 
+        // Перестановка значений переменных
         System.out.println("\n5. Перестановка значений переменных");
         int a = 2;
         int b = 5;
