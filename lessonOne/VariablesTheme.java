@@ -107,12 +107,11 @@ public class VariablesTheme {
         // Вывод количества сотен, десятков и единиц числа"
         System.out.println("\n8. Вывод количества сотен, десятков и единиц числа: ");
         int digitA = 123;
-        int hundreds, tens, units, sum, productOfNumbers;
-        hundreds = digitA / 100;
-        tens = digitA / 10;
-        units = digitA;
-        sum = hundreds + tens + units;
-        productOfNumbers = hundreds * tens * units;
+        int hundreds = digitA / 100;
+        int tens = digitA / 10;
+        int units = digitA;
+        int sum = hundreds + tens + units;
+        int productOfNumbers = hundreds * tens * units;
         System.out.println("Число " + digitA + " содержит: " + "\n" +
                 "сотен - " + hundreds + "\n" +
                 "десятков - " + tens + "\n" +
