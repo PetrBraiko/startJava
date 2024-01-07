@@ -1,7 +1,7 @@
 public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1. Вывод характеристик компьютера");
-        int numberOfSsd= 2;
+        int numberOfSsd = 2;
         byte numberOfCores = 2;
         short ram = 8192;
         long storageSizeTB = 1;
@@ -23,9 +23,10 @@ public class VariablesTheme {
         int costBook = 200;
         int discount = 11;
         int sum = costPen + costBook;
+        int discountAmount = sum * discount / 100;
         System.out.println("Общая стоимость товаров без скидки: " + sum + " руб." + "\n" +
-                "сумма скидки: " + (sum * discount / 100) + " руб." + "\n" +
-                "стоимость товаров со скидкой: " + (sum - ((sum) * discount / 100)) + " руб." + "\n");
+                "сумма скидки: " + discountAmount + " руб." + "\n" +
+                "стоимость товаров со скидкой: " + (sum - discountAmount + " руб." + "\n");
 
         //Вывод слова JAVA
         System.out.println("3. Вывод слова JAVA\n");
@@ -61,20 +62,17 @@ public class VariablesTheme {
         int c = a;
         a = b;
         b = c;
-        System.out.print("a = " + a + "\nb = " + b );
+        System.out.print("a = " + a + "\nb = " + b);
         System.out.println("\nС помощью арифметических действий: ");
         a -= b;
         b += a;
         a = b - a;
-        System.out.print("a = " + a + "\nb = " + b );
-        a ^= b;
-        b ^= a;
-        a ^= b;
+        System.out.print("a = " + a + "\nb = " + b);
         System.out.println("\nС помощью побитовой операции: ");
         a ^= b;
         b ^= a;
         a ^= b;
-        System.out.println("a = " + a + "\nb = " + b );
+        System.out.println("a = " + a + "\nb = " + b);
 
         // Вывод символов и их кодов
         System.out.println("\n6. Вывод символов и их кодов: ");
@@ -111,12 +109,12 @@ public class VariablesTheme {
         int hundreds = srcNumber / 100;
         int tens = srcNumber / 10;
         int ones = srcNumber;
-        int sum2 = hundreds + tens + ones;
+        sum = hundreds + tens + ones;
         int product = hundreds * tens * ones;
         System.out.println("Число " + srcNumber + " содержит: " + "\n" +
                 "сотен - " + hundreds + "\n" +
                 "десятков - " + tens + "\n" +
-                "единиц - " + ones + "\n" +
+                "единиц - " + one + "\n" +
                 "Сумма его цифр = " + sum2 + "\n" +
                 "Произведение = " + product);
 
