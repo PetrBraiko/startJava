@@ -55,12 +55,11 @@ public class IfElseStatementTheme {
                     System.out.println(number + " является отрицательным и четным");
                 } else {
                     System.out.println(number + " является отрицательным и нечетным");
-                        }
+                }
+                if (number % 2 == 0) {
+                    System.out.println(number + " является положительным и четным");
                 } else {
-                    if (number % 2 == 0) {
-                        System.out.println(number + " является положительным и четным");
-                    } else {
-                        System.out.println(number + " является положительным и нечетным");
+                    System.out.println(number + " является положительным и нечетным");
                     }
                 }
             }
@@ -124,8 +123,8 @@ public class IfElseStatementTheme {
         //7.Определение оценки по предметам
         System.out.println("\n7. Определение оценки по предметам");
         int historyPercent = 59;
-        int programmingPercent = 92;
         int historyGrade = 5;
+        int programmingPercent = 92;
         if (historyPercent <= 60) {
             historyGrade = 2;
         } else if (historyPercent <= 73) {
@@ -153,9 +152,7 @@ public class IfElseStatementTheme {
         int monthlyRevenue = 13000;
         int monthlyRent = 5000;
         int monthlyCosts = 9000;
-        int yearlyRevenue = monthlyRevenue * 12;
-        int yearlyExpenses = (monthlyRent + monthlyCosts) * 12;
-        int yearlyProfit = yearlyRevenue - yearlyExpenses;
+        int yearlyProfit = (monthlyRevenue -(monthlyRent + monthlyCosts)) * 12;
         if (yearlyProfit > 0) {
             System.out.println("Прибыль за год: + " + yearlyProfit + " руб.");
         } else {
