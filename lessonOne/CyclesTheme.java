@@ -4,67 +4,60 @@ public class CyclesTheme {
         System.out.println("\n1. Подсчет суммы четных и нечетных чисел");
         int start = -10;
         int end = 21;
-        int number = start;
-        int evenSum = 0;
-        int oddSum = 0;
+        int counter = start;
+        int sumEven = 0;
+        int sumOdd = 0;
         do {
-            if (number % 2 == 0) {
-                evenSum += number;
+            if (counter % 2 == 0) {
+                sumEven += counter;
             } else {
-                oddSum += number;
+                sumOdd += counter;
             }
-            number ++;
-        } while (number <= end);
-        System.out.println("В отрезке [-10, 21] сумма четны чисел = " + evenSum + ", а нечетных = " + oddSum);
+            counter++;
+        } while (counter <= end);
+        System.out.println("В отрезке [" + start + ", " + end + "] сумма четны чисел = " + sumEven + ", а нечетных = " + sumOdd);
 
         //2. Вывод чисел в порядке убывания
         System.out.println("\n2. Вывод чисел в порядке убывания");
-        int num1 = -10;
-        int num2 = 5;
-        int num3 = -1;
-        int maxNum = 0;
-        int minNum = 0;
-        if (num1 > num2 && num1 > num3) {
-            maxNum = num1;
-        } else if (num1 < num2 && num1 < num3) {
-            minNum = num1;
+        int number1 = 10;
+        int number2 = 5;
+        int number3 = -1;
+        int maxNumber = number1;
+        int minNumber = number1;
+        if (number2 > maxNumber) {
+            maxNumber = number2;
+        } else if (number2 < minNumber) {
+            minNumber = number2;
         }
-        if (num2 > num1 && num2 > num3) {
-            maxNum = num2;
-        } else if (num1 < num2 && num1 < num3) {
-            minNum = num2;
+        if (number3 > maxNumber) {
+            maxNumber = number3;
+        } else if (number3 < minNumber) {
+            minNumber = number3;
         }
-        if (num3 > num1 && num3 > num3) {
-            maxNum = num3;
-        } else if (num3 < num2 && num3 < num3) {
-            minNum = num3;
-        }
-        for (int i = maxNum; i >= minNum; i --){
-            System.out.print(i + "; ");
+        for (int i = maxNumber - 1; i > minNumber; i--) {
+            System.out.print(i + " ");
         }
 
         //3. Вывод реверсивного числа и суммы его цифр
         System.out.println("\n\n3. Вывод реверсивного числа и суммы его цифр");
-        number = 1234;
-        int i = 0;
+        int number = 1234;
         int sum = 0;
         System.out.print("исходное число в обратном порядке: ");
-        while (number != 0){
-            i = number % 10;
-            System.out.print(i);
+        while (number > 0) {
+            counter = number % 10;
+            System.out.print(counter);
             number /= 10;
-            sum += i;
-            i++;
+            sum += counter;
         }
         System.out.println("\nсумма его цифр: " + sum);
 
         //4. Вывод чисел в несколько строк
         System.out.println("\n4. Вывод чисел в несколько строк");
-        num1 = 1;
-        num2 = 24;
+        number1 = 1;
+        number2 = 24;
         int columns = 5;
         int count = 0;
-        for ( i = num1; i < num2; i++) {
+        for (int i = number1; i < number2; i++) {
             if (i % 2 != 0){
                 System.out.printf("%2d ", i);
                 count++;
@@ -75,27 +68,26 @@ public class CyclesTheme {
         }
         int remainingNumbers = columns - count % columns;
         if (remainingNumbers < columns) {
-            for (i = 0; i < remainingNumbers; i++) {
+            for (int i = 0; i < remainingNumbers; i++) {
                 System.out.printf("%2d ", 0);
             }
         }
 
         //5. Проверка количества двоек числа на четность/нечетность
-        System.out.println("\n5. Проверка количества двоек числа на четность/нечетность");
+        System.out.println("\n\n5. Проверка количества двоек числа на четность/нечетность");
         number = 3242592;
-        num1 = number;
-        count = 0;
-        while (num1 != 0) {
-            int digit = num1 % 10;
-            if (digit == 2) {
-                count ++;
+        int copyNumber = number;
+        int countTwos = 0;
+        while (copyNumber != 0) {
+            if (copyNumber % 10 == 2) {
+                countTwos++;
             }
-            num1 /= 10;
+            copyNumber /= 10;
         }
-        if (count % 2 == 0) {
-            System.out.println("В " + number + " четное кол во двоек: " + count);
+        if (countTwos % 2 == 0) {
+            System.out.println("В " + number + " четное кол во двоек: " + countTwos);
         } else {
-            System.out.println("В " + number + " нечетное кол во двоек: " + count);
+            System.out.println("В " + number + " нечетное кол во двоек: " + countTwos);
         }
 
         //6. Отображение геометрических фигур
@@ -103,45 +95,45 @@ public class CyclesTheme {
         System.out.println("Прямоугольник:");
         int width = 10;
         int height = 5;
-        for ( i = 0; i < height; i++) {
+        for ( int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 System.out.print("* ");
             }
             System.out.println();
         }
         System.out.println("Прямоугольный треугольник:");
-        i = height;
-        while (i > 0) {
-            int j = 1;
-            while (j <= i) {
+        counter = height;
+        while (counter > 0) {
+            width = 1;
+            while (width <= counter) {
                 System.out.print("# ");
-                j++;
+                width++;
             }
             System.out.println();
-            i--;
+            counter--;
         }
         System.out.println("Второй прямоугольный треугольник:");
-        int a = 1;
+        counter = 1;
         do {
-            int numStars = a;
-            if (a > height - a + 1) {
-                numStars = height - a + 1;
+            int numStars = counter;
+            if (counter > height - counter + 1) {
+                numStars = height - counter + 1;
             }
-            for ( i = 0; i < numStars; i++) {
+            for ( int i = 0; i < numStars; i++) {
                 System.out.print("$");
             }
             System.out.println();
-            a++;
-        } while (a < 1 + height);
+            counter++;
+        } while (counter < 1 + height);
 
         //7. Отображение ASCII-символов
         System.out.println("\n7. Отображение ASCII-символов:");
         System.out.printf("%-10s %-10s %-20s%n", "DECIMAL", "CHARACTER", "DESCRIPTION");
-        for ( i = 15; i < 128; i++) {
+        for (int i = 15; i < 128; i++) {
             char ch = (char) i;
             if (i % 2 != 0 && !Character.isDigit(ch)) {
                 System.out.printf("%-10d %-10c %-20s%n", i, ch, Character.getName(ch));
-            } else if (i >= 97 && i <= 122 && i % 2 == 0) {// ДОЛЖНО БЫТЬ НЕЧЕТНЫМ? ПРОВЕРЬ
+            } else if (i >= 97 && i <= 122 && i % 2 == 0) {
                 System.out.printf("%-10d %-10c %-20s%n", i, ch, Character.getName(ch));
             }
         }
@@ -187,11 +179,11 @@ public class CyclesTheme {
         //10 Отображение таблицы умножения Пифагора
         System.out.println("\n10. Отображение таблицы умножения Пифагора:");
         System.out.print("  |");
-        for ( i = 1; i <= 9; i++) {
+        for ( int i = 1; i <= 9; i++) {
             System.out.printf("%3d", i);
         }
         System.out.println("\n------------------------------");
-        for ( i = 1; i <= 9; i++) {
+        for ( int i = 1; i <= 9; i++) {
             System.out.print(i + " |");
             for (int j = 1; j <= 9; j++) {
                 System.out.printf("%3d", i * j);
