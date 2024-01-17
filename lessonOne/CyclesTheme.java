@@ -15,8 +15,8 @@ public class CyclesTheme {
             }
             counter++;
         } while (counter <= end);
-        System.out.println("В отрезке [" + start + ", " + end + 
-            "] сумма четны чисел = " + sumEven + ", а нечетных = " + sumOdd);
+        System.out.println("В отрезке [" + start + ", " + end +
+                "] сумма четны чисел = " + sumEven + ", а нечетных = " + sumOdd);
 
         //2. Вывод чисел в порядке убывания
         System.out.println("\n2. Вывод чисел в порядке убывания");
@@ -121,13 +121,13 @@ public class CyclesTheme {
             do {
                 System.out.print("$");
                 counter++;
-                if(width>3){
+                if(width > 3){
                     height--;
                 }
             } while (counter <= height);
             System.out.println();
             width++;
-            if(height>=3){
+            if(height >= 3) {
                 continue;
             }
             height++;
@@ -147,7 +147,7 @@ public class CyclesTheme {
         // 8. Проверка, является ли число палиндромом
         System.out.println("\n8. Проверка, является ли число палиндромом:");
         number = 1234321;
-        int copyNumber = number;
+        copyNumber = number;
         int reversedNumber = 0;
         while (number > 0) {
             int remainder = number % 10;
@@ -163,7 +163,7 @@ public class CyclesTheme {
         //9.Проверка, является ли число счастливым
         System.out.println("\n9. Проверка, является ли число счастливым:");
         number = 123456;
-        originalNumber = number; // сохраняем оригинальное значение числа
+        int originalNumber = number; // сохраняем оригинальное значение числа
         int sumLeftHalf = 0;
         int sumRightHalf = 0;
         for (int i = 0; i < 6; i++) {
