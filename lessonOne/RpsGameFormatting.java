@@ -1,5 +1,5 @@
 import java.util.Random;
-public class javaTask {
+public class RpsGameFormatting {
     public static void main(String[] args) throws InterruptedException {
         String rock = "\u270A";
         String scissors = "\u270C";
