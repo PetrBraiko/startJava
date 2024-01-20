@@ -11,7 +11,6 @@ public class RpsGameFormatting {
         Random r = new Random();
         int position1 = r.nextInt(100);
         String sign1 = rock;
-
         if (position1 > 66) {
             sign1 = paper;
         } else if (position1 > 33) {
@@ -30,7 +29,6 @@ public class RpsGameFormatting {
         String name2 = "WALLE";
         int position2 = r.nextInt(100);
         String sign2 = rock;
-
         if (position2 > 66) {
             sign2 = paper;
         } else if (position2 > 33) {
@@ -52,7 +50,6 @@ public class RpsGameFormatting {
             boolean isName1Equal = (sign1.equals(rock) && sign2.equals(scissors)) ||
                     (sign1.equals(scissors) && sign2.equals(paper)) ||
                     (sign1.equals(paper) && sign2.equals(rock));
-
             if (isName1Equal) {
                 System.out.println("\nПобедил - " + name1);
             } else {
