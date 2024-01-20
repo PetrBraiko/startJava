@@ -7,7 +7,7 @@ public class Calculator {
         int result;
         if (b == 0) {
             System.out.println("На ноль делить нельзя");
-        } else if (a >= 0 && b >= 0) {
+        } else if (a >= 0) {
             if (sign == '+') {
                 result = a + b;
             } else if (sign == '-') {
