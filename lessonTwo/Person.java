@@ -5,6 +5,7 @@ public class Person {
     double height;
     double weight;
     int age;
+
     //инициализация атрибутов класса
     public Person (String gender, String name, double height, double weight, int age) {
         this.gender = "man";
@@ -13,7 +14,8 @@ public class Person {
         this.weight = 80.5;
         this.age = 32;
     }
-        //методы описывающие поведение
+
+    //методы описывающие поведение
     public void walk() {
         System.out.println(name + " идет.");
     }
