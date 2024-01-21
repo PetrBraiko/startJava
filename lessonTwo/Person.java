@@ -8,11 +8,11 @@ public class Person {
 
     //инициализация атрибутов класса
     public Person (String gender, String name, double height, double weight, int age) {
-        this.gender = "man";
-        this.name = "Petr";
-        this.height = 1.73;
-        this.weight = 80.5;
-        this.age = 32;
+        this.gender = gender;
+        this.name = name;
+        this.height = height;
+        this.weight = weight;
+        this.age = age;
     }
 
     //методы описывающие поведение
