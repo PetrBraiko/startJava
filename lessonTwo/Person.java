@@ -1,4 +1,4 @@
-public class Person{
+public class Person {
     //атрибуты класса
     String gender;
     String name;
@@ -7,7 +7,7 @@ public class Person{
     int age;
 
     //инициализация атрибутов класса
-    public Person (String gender, String name, double height, double weight, int age) {
+    public Person(String gender, String name, double height, double weight, int age) {
         this.gender = gender;
         this.name = name;
         this.height = height;
