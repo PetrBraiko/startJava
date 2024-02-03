@@ -5,38 +5,36 @@ public class Wolf {
     private int age;
     private String color;
 
-    // Геттеры
+    // Геттеры и сеттеры для переменной gender
     public String getGender() {
         return gender;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    // Сеттеры
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    // Геттеры и сеттеры для переменной name
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
+    // Геттеры и сеттеры для переменной weight
+    public double getWeight() {
+        return weight;
+    }
+
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    // Геттеры и сеттеры для переменной age
+    public int getAge() {
+        return age;
     }
 
     public void setAge(int age) {
@@ -45,6 +43,11 @@ public class Wolf {
         } else {
             this.age = age;
         }
+    }
+
+    // Геттеры и сеттеры для переменной color
+    public String getColor() {
+        return color;
     }
 
     public void setColor(String color) {
