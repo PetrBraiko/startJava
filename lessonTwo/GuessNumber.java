@@ -18,21 +18,16 @@ public class GuessNumber {
         while (true) {
             System.out.print(currentPlayer.getName() + ", введите ваше предположение: ");
             int guess = scanner.nextInt();
-
             if (guess < secretNumber) {
                 System.out.println("Число " + guess + " меньше того, что загадал компьютер");
             } else if (guess > secretNumber) {
                 System.out.println("Число " + guess + " больше того, что загадал компьютер");
             } else {
-                System.out.println("Вы победили! Число " + guess + " угадано!");
+                System.out.println("Поздравляем, " + currentPlayer.getName() + ", вы победили! Число "
+                        + guess + " угадано!");
                 break;
             }
-
-            if (currentPlayer == player1) {
-                currentPlayer = player2;
-            } else {
-                currentPlayer = player1;
-            }
+            currentPlayer = (currentPlayer == player1) ? player2 : player1;
         }
     }
 
