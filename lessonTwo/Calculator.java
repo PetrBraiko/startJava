@@ -6,7 +6,7 @@ public class Calculator {
     public Calculator() {
     }
 
-    public void mat(int num1, char sign, int num2) {
+    public void calculations(int num1, char sign, int num2) {
         int result;
         switch (sign) {
             case '+':
