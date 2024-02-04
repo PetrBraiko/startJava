@@ -27,7 +27,7 @@ public class Calculator {
         return sign;
     }
 
-    public void calculations(int num1, char sign, int num2) {
+    public void calculate() {
         int result;
         switch (sign) {
             case '+':
@@ -40,12 +40,11 @@ public class Calculator {
                 result = num1 * num2;
                 break;
             case '/':
-                if (num2 != 0) {
-                    result = num1 / num2;
-                } else {
+                if (num2 == 0) {
                     System.out.println("Ошибка: деление на ноль");
                     return;
                 }
+                result = num1 / num2;
                 break;
             case '^':
                 result = 1;

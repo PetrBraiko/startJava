@@ -4,7 +4,7 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Calculator cal = new Calculator();
-        String playAgain;
+        String continuation;
         do {
             System.out.print("Введите первое число: ");
             cal.setNum1(scanner.nextInt());
@@ -12,14 +12,12 @@ public class CalculatorTest {
             cal.setSign(scanner.next().charAt(0));
             System.out.print("Введите второе число: ");
             cal.setNum2(scanner.nextInt());
-            cal.calculations(cal.getNum1(), cal.getSign(), cal.getNum2());
-            System.out.println("Хотите продолжить игру: yes/no  ?");
-            playAgain = scanner.next();
-        } while (playAgain.equals("yes"));
+            cal.calculate();
+            do {
+                System.out.print("Хотите продолжить вычисления? [yes/no]: ");
+                continuation = scanner.next();
+            } while (!continuation.equals("yes") && !continuation.equals("no"));
+        } while (continuation.equals("yes"));
         System.out.println("Игра завершена!");
     }
 }
-
-
-
-
