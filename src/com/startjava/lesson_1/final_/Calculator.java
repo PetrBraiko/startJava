@@ -1,10 +1,12 @@
+package com.startjava.lesson_1.final_;
+
 public class Calculator {
     public static void main(String[] args) {
         //1. калькулятор
         int a = 10; 
         int b = 3;
         char sign = '%';
-        int result;
+        int result = 0;
         if (b == 0) {
             System.out.println("На ноль делить нельзя");
         } else if (a >= 0) {
