@@ -3,7 +3,7 @@ package com.startjava.lesson_2_3.rps;
 import java.util.Random;
 import java.util.Scanner;
 
-// Игра Камень-Ножницы-Бумага
+//Игра Камень-Ножницы-Бумага
 public class RpsGameFormatting {
     public static void main(String[] args) throws InterruptedException {
         Random r = new Random();
