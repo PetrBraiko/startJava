@@ -18,7 +18,9 @@ public class Calculator {
     }
 
     public void calculate() {
-        int result;
+        double result = 0; // Используем double для деления
+        boolean isValid = true;
+
         switch (sign) {
             case '+':
                 result = num1 + num2;
@@ -31,28 +33,25 @@ public class Calculator {
                 break;
             case '/':
                 if (num2 == 0) {
-                    System.out.println("Ошибка: деление на ноль");
-                    return;
+                    System.out.println("Ошибка: деление на ноль запрещено");
+                    isValid = false;
+                } else {
+                    result = (double) num1 / num2; // Корректное деление
                 }
-                result = num1 / num2;
                 break;
             case '^':
-                result = 1;
-                for (int i = 0; i < num2; i++) {
-                    result *= num1;
-                }
+                result = Math.pow(num1, num2); // Корректное возведение в степень
                 break;
             case '%':
                 result = num1 % num2;
                 break;
             default:
-                System.out.println("Введенная мат. операция не поддерживается\n");
-                return;
+                System.out.println("Ошибка: операция '" + sign + "' не поддерживается");
+                isValid = false;
         }
-        if (num1 >= 0) {
-            System.out.println(num1 + " " + sign + " " + num2 + " = " + result);
-        } else {
-            System.out.println("Оба числа должны быть положительными");
+
+        if (isValid) {
+            System.out.printf("%d %c %d = %.2f%n", num1, sign, num2, result);
         }
     }
 }
